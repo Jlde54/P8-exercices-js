@@ -1,8 +1,11 @@
+/********************************************************************
+ * @description - Conversion d'un nombre décimal en binaire
+ * @function (convertToBinary)
+ */
 function convertToBinary() {
     let number = document.querySelector("#decimalInput").value;
     const binaire = document.querySelector("#binaryResult");
-    console.log("number : ", number)
-    console.log("estNombreDecimal(number) : ", estNombreDecimal(number))
+
     if (estNombreDecimal(number)) {
         let array = [];
         let rest = 0;
@@ -15,8 +18,15 @@ function convertToBinary() {
     } else {
         binaire.textContent = "";
     }
+    // binaire.textContent = estNombreDecimal(number) ? Number(number).toString(2) : "";
 }
 
+/********************************************************************
+ * @description - Test nombre décimal
+ * @function (estNombreDecimal)
+ * @param {valeur} - valeur à tester
+ * @return {} - true si la valeur est un nombre décimal
+ */
 function estNombreDecimal(valeur) {
     return !isNaN(valeur) && Number(valeur) === parseFloat(valeur);
 }

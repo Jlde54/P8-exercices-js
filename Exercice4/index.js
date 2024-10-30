@@ -1,5 +1,3 @@
-const myBtn = document.querySelector("#myButton");
-myBtn.addEventListener("click", () => {
-    const myMsg = document.querySelector("#myMsg");
-    myMsg.textContent = "Bonjour, vous avez cliqué sur le bouton !";
+document.querySelector("#myButton").addEventListener("click", () => {
+    document.querySelector("#myMsg").textContent = "Bonjour, vous avez cliqué sur le bouton !";
 });
